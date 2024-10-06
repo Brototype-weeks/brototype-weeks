@@ -1,0 +1,86 @@
+
+.footer{
+    background-color: rgb(22, 21, 21)
+}
+  .footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+    padding: 60px;
+    padding-right: 301px;
+    margin-left: 100px;
+    padding-top: 1px;
+  }
+  .footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  .footer-col .links li a {
+    text-decoration: none;
+    color: #bfbfbf;
+  }
+  
+  .footer-col p {
+    margin: 20px 0;
+    color: #bfbfbf;
+    max-width: 300px;
+  }
+  .footer-col form {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .Icon{
+    color: white;
+    margin-top: 10px;
+    padding: 13px;
+    font-size: 25px;
+  }
+  .Icon-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 160px;
+    padding-top: 89px;
+  }
+  .footer-button{
+    background-color: transparent;
+    color: #bfbfbf;
+    text-align: center;  
+    width: 90px;
+    font-weight: 100;
+    border-color:#bfbfbf;
+    height: 30px;
+    border-width: 1px;
+    font-size: 12px;
+  
+  }
+  .number{
+    font-size: 13px;
+    margin-top: 10px;
+  }
+ 
+  /* -------------------------------------   */
+  @media (max-width: 768px) {
+    .footer {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      border-radius: 0;
+    }
+    .footer .footer-row {
+      padding: 20px;
+      gap: 1rem;
+    }
+    .footer-col form {
+      display: block;
+    }
+    .footer-col form :where(input, button) {
+      width: 100%;
+    }
+    .footer-col form button {
+      margin: 10px 0 0 0;
+    }
+  }

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script src="sample.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+
+//  let arr=[1,2,3,4,5,2,3,4]
+
+// for(let i=0;i<arr.length-1;i++){
+//     for(let j=0;j<arr.length;j++){
+//         if(arr[i]==arr[j]&&i!=j){
+//             for(let k=j;k<arr.length-1;k++){
+//                 arr[k]=arr[k+1]
+
+//             }
+//             j--
+//             arr.length--
+//         }
+//     }
+// }
+// console.log(arr);
+
+// let arr=[1,2,3,4,5,6,7,8,5,6,4,7,]
+// let first=Number.MIN_SAFE_INTEGER
+// let second=Number.MIN_SAFE_INTEGER
+// let third=Number.MIN_SAFE_INTEGER
+
+// for(i=0;i<arr.length;i++){
+//     if(arr[i]>first){
+//         third=second;
+//         second=first;
+//         first=arr[i];
+//     }else if(arr[i]>second&&arr[i]!=first){
+//         third=second;
+//         second=arr[i]
+//     }else if(arr[i]>third&&arr[i]!=first&&arr[i]!=second){
+//         third=arr[i]
+//     }
+// }
+// console.log(third);
+
+// let arr=[1,2,3,4,5,2,3,4]
+
+// let newArray=arr.reduce((acc,value)=>{
+//     if(!acc.includes(value)){
+//         acc.push(value)
+//     }
+//     return acc;
+// },[])
+// console.log(newArray);
+// const fs = require("fs");
+// const { json } = require("stream/consumers");
+
+// let arr = [1, 2, 3, 4, 5,6,7];
+
+// function hai(arr) {
+//   //    arr = arr;
+//   return new Promise((res, rej) => {
+//     newArray = arr.filter((value) => {
+//       return value % 2 != 0;
+//     });
+//     console.log(newArray);
+
+//     res(
+//       fs.writeFile("./test.txt", JSON.stringify(newArray), (err) => {
+//         if (err) {
+//           console.log("error occur");
+//         }
+//       })
+//     );
+//   });
+// }
+// hai(arr);
+
+// let person = {
+//   eng: 23,
+//   mal: 24,
+//   mat: 27,
+// };
+// let sum = 0;
+// for (const i in person) {
+//   sum = sum + person[i];
+// }
+// console.log(sum);
+
+// let arr=[1,2,3,4,5,6,7]
+// console.log(arr.includes(4));
+// let arr="hello"
+// // console.log(Array.from(arr));
+// let newArray=new Set(Array.from(arr))
+// console.log(newArray);
+
+// let arr=[1,2,3,4,5,3,4,5]
+// let newArray=[...new Set(arr)]
+// console.log(newArray);
+
+// const fs=require('fs')
+// fs.readFile("test.txt","utf-8",(err,data)=>{
+//     if(err){
+//         console.log("error");
+
+//     }else{
+//         console.log(data);
+
+//     }
+
+// })
+
+// let arr="inffnis"
+// let flag=0;
+// for(i=0;i<arr.length/2;i++){
+//     if(arr[i]!=arr[arr.length-1-i]){
+//         flag=1
+//         break;
+//     }
+// }
+// if (flag==0) {
+//     console.log("is palindrome");
+
+// } else {
+//     console.log("is not palindrome");
+
+// }
+
+// function* hai(max){
+//     for(i=1;i<=max;i++){
+//         yield i
+//     }
+// }
+
+// const arr=[];
+
+// for(const num of hai(50)){
+//     arr.push(num)
+// }
+// console.log(arr);
+// const crypto=require('crypto')
+// console.log(encrypt("hai"));
+
+// let obj={
+//     key1:1234,
+//     key2:1235,
+//     key3:1236,
+//     key4:1237,
+//     key5:1238,
+//     key6:1239,
+// }
+// let person={}
+// for(const num in obj){
+//     if(obj[num]%2!=0){
+//      delete obj[num]
+//     }
+// }
+// console.log(person);
+
+// const{key3,key1}=obj
+// console.log(key3);
+// console.log(key1);
+
+// function example(arr){
+//     let arr1=[];
+//     let arr2=[];
+//     if(arr.length%2==0){
+//         for(i=0;i<arr.length;i++){
+//             if(i<arr.length/2){
+//                 arr1.push(arr[i])
+//             }else{
+//                 arr2.push(arr[i])
+//             }
+//         }
+//         console.log(arr1);
+//         console.log(arr2);
+
+//     }else{
+//         throw new Error('array length is odd number')
+//     }
+// }
+// let arr=[1,2,3,4,5,6,7]
+// example(arr)
+// const fs = require("fs");
+// const crypto = require("crypto");
+// const algorithm = "aes-256-cbc";
+// const key = crypto.randomBytes(32);
+// const iv = crypto.randomBytes(16);
+// function encrypt(text, key, iv) {
+//   const cipher = crypto.createCipheriv(algorithm, key, iv);
+//   let encrypted = cipher.update(text, "utf8", "hex");
+//   encrypted += cipher.final("hex");
+//   return encrypted;
+// }
+// function decrypt(encryptedText, key, iv) {
+//   const decipher = crypto.createDecipheriv(algorithm, key, iv);
+//   let decrypted = decipher.update(encryptedText, "hex", "utf8");
+//   decrypted += decipher.final("utf8");
+//   return decrypted;
+// }
+
+
+// fs.readFile("newtest", "utf-8", (err, data) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       try {
+//         const variable = decrypt(data, key, iv);
+//         console.log(variable);
+//       } catch (error) {
+//         console.log("discription error");
+//       }
+//     }
+//   });
+  
+// function example(arr) {
+//   return new Promise((resolve, reject) => {
+//     if (arr % 2 == 0) {
+//       const variable = encrypt(arr.toString(),key,iv);
+
+//       fs.appendFile("newtest", variable + "\n", (err) => {
+//         if (err) {
+//           reject(console.log("error occur"));
+//         } else {
+//           resolve(console.log("success"));
+//         }
+//       });
+//     } else {
+//       reject("give a even number");
+//     }
+//   });
+// }
+
+// let arr = 42;
+// example(arr).catch(err=>console.log(err))
+
+// const fs = require("fs");
+// fs.unlink("newtest",(err)=>{})
+    // let noor=['pottan']
+    // let shibin=noor;
+    // shibin[0]='mandan'
+    // console.log(shibin);
+    // console.log(noor);
+
+
+// function* example(num){
+//     for(i=num;i>0;i--){
+//         yield i;
+//     }
+// }
+// let arr=[];
+// for(const i of example(50)){
+//     arr.push(i)
+// }
+// console.log(arr);
+
+// function example(params){
+//     console.log(this.name);
+//     console.log(params);
+    
+// }
+// let person={
+//     name:"noor",
+//     age:21
+// }
+// const bye=example.bind(person,["hai"])
+// bye() -->
+

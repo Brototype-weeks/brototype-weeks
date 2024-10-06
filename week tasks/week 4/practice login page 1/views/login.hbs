@@ -1,0 +1,60 @@
+
+<link rel="stylesheet" href="login.css" />
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="msapplication-TileColor" content="#0ed3cf" />
+        <meta name="theme-color" content="#0ed3cf" />
+        <title>Login Page by alchems.</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-200">
+        <div class="bg-black before:animate-pulse before:bg-gradient-to-b before:from-gray-900 overflow-hidden before:via-[#00FF00] before:to-gray-900 before:absolute">
+            <div id="myDIV">
+                <div class="w-[100vw] h-[100vh] px-3 sm:px-5 flex items-center justify-center absolute">
+                    <div class="w-full sm:w-1/2 lg:2/3 px-6 bg-gray-500 bg-opacity-20 bg-clip-padding backdrop-filter backdrop-blur-sm text-white z-50 py-4 rounded-lg">
+                        <div class="w-full flex justify-center text-[#00FF00] text-xl mb:2 md:mb-5">
+                            Sign In
+                        </div>
+        <form action="login" method="POST">
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 text-xs font-medium text-white">Your email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 md:p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="name@alchems.net"
+                                required=""
+                            />
+                        </div>
+                        <div class="mb-6">
+                            <label for="password" class="block mb-2 text-xs font-medium text-white">Your password</label>
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1.5 md:p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required=""
+                                   placeholder="**********"
+                            />
+                        </div>
+                        <div class="flex flex-row justify-between">
+    <div class="text-white text-sm md:text-md mr-4">
+      <a href="#" class="custom-link">Forgot Password</a>
+    </div>
+    <div class="text-white text-sm md:text-md">
+      <a href="#" class="custom-link">Signup</a>
+    </div>
+                        </div>
+                        <button class="mt-4 md:mt-10 w-full flex justify-center text-sm md:text-xl bg-[#00FF00] py-2 rounded-md">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </body>
+</html>

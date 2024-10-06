@@ -1,0 +1,45 @@
+<%- include('../layout/header.ejs') %>  
+<div class="mt-5  mb-5  ">
+
+    <!-- <div class="d-flex justify-content-center mb-2"> -->
+     <a href="../admin/dashboard">  <i class="text-white ps-4 bi bi-arrow-left"></i> </a> 
+        <div class="d-flex ps-5   mb-2">
+      <h5 class="mt-3 text-white"> Add users </h5>
+    </div>
+    <% if (msg) {%>
+      <p class="ps-5 text-danger"> <%= msg %> </p> 
+      <% }%>
+    <div class="d-flex ps-5 ">
+      <div class="interface-container ">
+  
+        <!-- START Interface placeholder -->
+        <form action="/admin/addUser" method="post">
+          <div class="text-white form-group">
+            <label class="text-white" for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp" placeholder="Name">
+            
+          </div>
+          <div class="form-group text-white">
+            <label for="exampleInputEmail1">Email </label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+          <div class="form-group text-white">
+            <label for="phone">phone</label>
+            <input type="text" class="form-control" name="phone" id="phone" placeholder="phone">
+          </div>
+           <div class="form-group text-white">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" id="confirm_password" placeholder="Password">
+          </div>
+        
+          <button type="submit" class="mt-3 btn-primary">Submit</button>
+        </form>
+        <!-- END Interface placeholder -->
+  
+      </div>
+    </div>
+  
+  </div>
+
+  <%- include('../layout/footer.ejs') %>

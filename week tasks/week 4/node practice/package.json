@@ -1,0 +1,17 @@
+{
+  "name": "node-practice",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "dev"  : "nodemon script.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "hbs": "^4.2.0",
+    "nodemon": "^3.1.4"
+  }
+}

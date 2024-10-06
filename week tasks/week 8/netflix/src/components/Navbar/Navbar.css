@@ -1,0 +1,55 @@
+.Navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+}
+.logo {
+  position: fixed;
+  left: 30px;
+  width: 80px;
+}
+.nav-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 140px;
+  color: white;
+  gap: 15px;
+  font-size: small;
+  padding-left: 10px;
+}
+.Header-Icon {
+  color: white;
+  position: fixed;
+  right: 80px;
+  font-size: 25px;
+  margin-top: 3px;
+}
+.Header-Icon1 {
+    color: white;
+    position: fixed;
+    right: 180px;
+    font-size: 25px;
+    margin-top: 3px;
+  }
+.Header-text {
+  position: fixed;
+  right: 120px;
+  color: white;
+  margin-top: 5px;
+}
+.avatar {
+  position: fixed;
+  right: 30px;
+  width: 30px;
+}
+
+@media (max-width:768px) {
+ .nav-row{
+  display: none;
+ }   
+}

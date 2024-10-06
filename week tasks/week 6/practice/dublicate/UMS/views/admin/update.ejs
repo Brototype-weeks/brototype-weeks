@@ -1,0 +1,48 @@
+<%- include('../layout/header.ejs') %>  
+<div class="mt-5  mb-5  ">
+
+    <!-- <div class="d-flex justify-content-center mb-2"> -->
+     <a href="../admin/dashboard">  <i class="text-white ps-4 bi bi-arrow-left"></i> </a> 
+        <div class="d-flex ps-5   mb-2">
+      <h5 class="mt-3 text-white"> Update Users </h5>
+    </div>
+   
+    <div class="d-flex ps-5 ">
+      <div class="interface-container ">
+  
+        <!-- START Interface placeholder -->
+        <form action="update" method="post">
+          <div class="text-white form-group">
+            <!-- <label class="text-white" for="name">Name</label> -->
+            <input type="hidden" class="form-control" name="userId" id="name" aria-describedby="emailHelp" value="<%= user._id %>" placeholder="Name" required>
+
+          </div>
+          <div class="text-white form-group">
+            <label class="text-white" for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp" value="<%= user.name %>" placeholder="Name" required>
+            
+          </div>
+          <div class="form-group text-white">
+            <label for="exampleInputEmail1">Email </label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= user.email %>" placeholder="email" required>
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+          <div class="form-group text-white">
+            <label for="phone">phone</label>
+            <input type="text" class="form-control" name="phone" id="phone" value="<%= user.phone %>" placeholder="phone" required>
+          </div>
+           <div class="form-group text-white">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password" id="confirm_password" value="<%= user.password %>" placeholder="Password" required>
+          </div>
+        
+          <button type="submit" class="mt-3 btn-primary">Submit</button>
+        </form>
+        <!-- END Interface placeholder -->
+  
+      </div>
+    </div>
+  
+  </div>
+
+  <%- include('../layout/footer.ejs') %>

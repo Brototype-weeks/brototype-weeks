@@ -1,0 +1,91 @@
+<%- include('../layout/header.ejs') %>
+<link rel="stylesheet" href="dashboard.css" />
+
+<div class="navbar">
+  <div class="logo">
+    <img
+      src="https://cdn-icons-png.freepik.com/512/8686/8686102.png"
+      alt="Logo"
+    />
+    <a href="#" style="color: white; text-decoration: none">UMS</a>
+  </div>
+  <div class="menu">
+    <a href="../admin/dashboard">Dashboard</a>
+    <a href="../admin/addUser">create</a>
+  </div>
+  <div class="perfil">
+    <div class="contenido-perfil">
+   <% adminEmail %>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png"
+        alt="Usuario"
+      />
+    </div>
+    <div class="desplegable">
+      <a href="logout" type="submit">logout</a>
+    </div>
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<div class="contenedor contenido-principal p-3">
+  <div class="usuarios-barra">
+    <h5>UMS ADMIN PANEL</h5>
+    <button id="nuevoUsuario">
+      <i class="bi bi-plus"></i> <a href="./addUser">Add User</a>
+    </button>
+  </div>
+<form action="search" method="post" >
+  <div class="busqueda-barra">
+    <input id="nombre" name="search" type="search" placeholder="search user" /> 
+    <button
+    type="submit">
+      search
+    </button>
+  </div>
+</form>
+  <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="tablaDatos">
+      <% if(user.length>0){ for (let i = 0; i < user.length; i++) { %>
+      <tr>
+
+        <td scope="row"><%= i+1 %></td>
+        <td><%= user[i].name %></td>
+        <td><%= user[i].email %></td>
+        <td><%= user[i].phone %></td>
+
+        <td class="acciones">
+          <button class="botonEditar">
+            <a class="btn btn-sucess" role="button" href="./update?id=<%= user[i]._id %>">Update </a></button
+          ><button class="botonEliminar">
+            <a class="btn btn-danger" role="button" href="./delete?id=<%= user[i]._id %>">delete</a>
+          </button>
+        </td>
+      </tr>
+
+      <% }} else{%>
+      <tr>
+        <td >User not found</td>
+      </tr>
+        <% } %>
+    </tbody>
+  </table>
+  <% if (msg) {%>
+  <p class="ps-5 text-danger"><%= msg %></p>
+  <% }%>
+</div>
+
+<%- include('../layout/footer.ejs') %>

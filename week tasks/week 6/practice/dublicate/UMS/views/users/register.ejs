@@ -1,0 +1,36 @@
+<%- include('../layout/header.ejs') %>
+
+<link rel="stylesheet" href="registration.css" />
+<div class="login-form">
+    <div class="text">
+       SIGNUP
+    </div>
+      <% if (msg) {%>
+     <p class="text-danger"> <%= msg %> </p> 
+     <% }%>
+    <form action="register" method="post">
+       <div class="field">
+          <div class="fas fa-envelope"></div>
+          <input type="text" name="name" placeholder="Name" class="name" required/>
+       </div>
+       <div class="field">
+        <div class="fas fa-envelope"></div>
+        <input type="email" name="email" placeholder="Email " class="email" required/>
+     </div>
+     <div class="field">
+        <div class="fas fa-envelope"></div>
+        <input type="phone" name="phone" placeholder="phone" class="pass" required/>
+     </div>
+       <div class="field">
+          <div class="fas fa-lock"></div>
+          <input type="password" name="password" placeholder="password" class="pass" required/> 
+       </div>
+       <button>SIGNUP</button>
+       <div class="link">
+          you are a member?
+          <a href="./login">Login now</a>
+       </div>
+    </form>
+ </div>
+
+<%- include('../layout/footer.ejs') %>
